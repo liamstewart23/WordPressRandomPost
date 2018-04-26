@@ -8,10 +8,13 @@ Author: Liam Stewart
 Author URI: https://liamstewart.ca
 */
 
-
+/**
+ * @param $atts
+ *
+ * @return string
+ */
 function ls_random_post( $atts ) {
     shortcode_atts( array(
-        'posts' => 1,
         'type'  => 'post'
     ), $atts );
 
@@ -37,10 +40,6 @@ function ls_random_post( $atts ) {
 
     return $post;
 }
-
-
-
-
 
 function ls_randompost_register_shortcodes() {
     add_shortcode( 'random', 'ls_random_post' );
